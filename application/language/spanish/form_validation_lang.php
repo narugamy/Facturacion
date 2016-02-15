@@ -1,0 +1,32 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+$lang['form_validation_required']			= "El campo %s es obligatorio.";
+$lang['form_validation_isset']				= "El campo %s debe contener un valor.";
+$lang['form_validation_valid_email']		= "El campo %s debe contener una dirección de correo válida.";
+$lang['form_validation_valid_emails']		= "El campo %s debe contener todas las direcciones de correo válidas.";
+$lang['form_validation_valid_url']			= "El campo %s debe contener una URL válida.";
+$lang['form_validation_valid_ip']			= "El campo %s debe contener una dirección IP válida.";
+$lang['form_validation_min_length']			= "El campo %s debe contener al menos %s caracteres de longitud.";
+$lang['form_validation_max_length']			= "El campo %s no debe exceder los %s caracteres de longitud.";
+$lang['form_validation_exact_length']		= "El campo %s debe tener exactamente %s carácteres.";
+$lang['form_validation_alpha']				= "El campo %s sólo puede contener carácteres alfabéticos.";
+$lang['form_validation_alpha_numeric']		= "El campo %s sólo puede contener carácteres alfanuméricos.";
+$lang['form_validation_alpha_numeric_spaces']	= 'El campo %s sólo puede contener carácteres alfanuméricos y espacios.';
+$lang['form_validation_alpha_dash']			= "El campo %s sólo puede contener carácteres alfanuméricos, guiones bajos '_' o guiones '-'.";
+$lang['form_validation_numeric']			= "El campo %s sólo puede contener números.";
+$lang['form_validation_is_numeric']			= "El campo %s sólo puede contener carácteres numéricos.";
+$lang['form_validation_integer']			= "El campo %s debe contener un número entero.";
+$lang['form_validation_regex_match']		= "El campo %s no tiene el formato correcto.";
+$lang['form_validation_matches']			= "El campo %s no concuerda con el campo %s .";
+$lang['form_validation_differs']			= 'El campo %s es diferente a %s.';
+$lang['form_validation_is_unique']			= "El campo %s ya esta siendo usado.";
+$lang['form_validation_is_natural']			= "El campo %s debe contener sólo números positivos.";
+$lang['form_validation_is_natural_no_zero']	= "El campo %s debe contener un número mayor que 0.";
+$lang['form_validation_decimal']			= "El campo %s debe contener un número decimal.";
+$lang['form_validation_less_than']			= "El campo %s debe contener un número menor que %s.";
+$lang['form_validation_less_than_equal_to']	= 'El campo %s debe contener un número menor o igual a %s.';
+$lang['form_validation_greater_than']						= "El campo %s debe contener un número mayor que %s.";
+$lang['form_validation_greater_than_equal_to']	= 'El campo %s debe contener un número mayor o igual que %s.';
+$lang['form_validation_error_message_not_set']	= 'No puede acceder a un mensaje de error que corresponde a su nombre de campo{field}.';
+$lang['form_validation_in_list']		= 'El campo %s debe ser una de: %s';
