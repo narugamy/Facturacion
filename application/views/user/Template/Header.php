@@ -29,17 +29,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<a class="navbar-brand title" href="#">Alchemist</a>
 						</h1>
 					</div>
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control Search" placeholder="Search...">
-							</div>
-							<button type="submit" class="fa fa-search"></button>
-						</form>
-						<ul class="nav navbar-nav navbar-right">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control Search" placeholder="Search...">
+						</div>
+						<button type="submit" class="fa fa-search"></button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-globe"></i>
-								<span class="number">5</span>
+									<i class="fa fa-globe"></i>
+									<span class="number">5</span>
 								</a>
 								<ul class="dropdown-menu menu">
 									<li>
@@ -90,16 +90,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="clearfix"></div>
 										</a>
 									</li>
-									<li><a href="#">
-										<div class="user-new">
-										<p>New comments waiting approval</p>
-										<span>hace 1 semana</span>
-										</div>
-										<div class="user-new-left">
-										<i class="fa fa-rss"></i>
-										</div>
-										<div class="clearfix"> </div>
-									</a></li>
+									<li>
+										<a href="#">
+											<div class="user-new">
+												<p>New comments waiting approval</p>
+												<span>hace 1 semana</span>
+											</div>
+											<div class="user-new-left">
+												<i class="fa fa-rss"></i>
+											</div>
+											<div class="clearfix"> </div>
+										</a>
+									</li>
 									<li><a href="#" class="view">View all messages</a></li>
 								</ul>
 							</li>
@@ -126,22 +128,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</ul>
 							</li>
 						</ul>
-					</div>
-					<div class="clearfix"></div>
-					<div class="navbar-default sidebar">
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav menu-left">
-								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span><span class="fa fa-angle-down"></span></a>
-									<ul class="dropdown-menu menu2">
-										<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Agregar Producto</span></a></li>
-										<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Editar Producto</span></a></li>
-										<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Eliminar Producto</span></a></li>
-									</ul>
-								</li>
-								<li><a href="#"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Facturas</span></a></li>
-								<li><a href="#"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Boletas</span></a></li>
-							</ul>
-						</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="navbar-default sidebar">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav menu-left">
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span><span class="fa fa-angle-down"></span></a>
+								<ul class="dropdown-menu menu2">
+									<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Agregar Producto</span></a></li>
+									<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Editar Producto</span></a></li>
+									<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Eliminar Producto</span></a></li>
+								</ul>
+							</li>
+							<li><a href="#"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Facturas</span></a></li>
+							<li><a href="#"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Boletas</span></a></li>
+						</ul>
 					</div>
 				</div>
 			</nav>

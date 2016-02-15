@@ -1,10 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class ControllerUserProducto extends CI_Controller{
+class ControllerAdminProduct extends CI_Controller{
+
+	private $perfil;
 
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('Modelproducto');
+		$this->perfil=$this->session->userdata('Perfil');
+		if($this->perfil!='admin' || empty($this->perfil)){
+			redirect(base_url());
+		}
 	}
 
 	public function Index(){
