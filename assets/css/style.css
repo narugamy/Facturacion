@@ -53,7 +53,8 @@ input.Search.btn-primary.btn-lg1.btn-block {
   -webkit-border-radius: 1em;
   padding: 0.3em 1em;
 }
-.banner {
+.banner,
+.centro {
   background: #fff;
   border: 1px solid #ebeff6;
   -webkit-border-radius: 5px;
@@ -71,7 +72,8 @@ input.Search.btn-primary.btn-lg1.btn-block {
   margin: 0 0.6em;
 }
 .centro {
-  background: #fff;
+  margin-top: 1.5em;
+  padding: 2em 2em;
 }
 .container-bar {
   background: #fff;
