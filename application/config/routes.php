@@ -57,4 +57,4 @@ $route['create'] = 'Home/Create';
 
 /* Panel User */
 $route['paneluser'] = 'ControllerUser/Index';
-$route['paneluser/producto'] = 'ControllerProducto/Index';
+$route['paneluser/productos'] = 'ControllerUserProducto/Index';
