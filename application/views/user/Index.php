@@ -1,8 +1,6 @@
 <div class="banner">
 	<h2>
 		<a href="<?=base_url()?>" title="index">Home</a>
-		<i class="fa fa-angle-right"></i>
-		<span>Productos</span>
 	</h2>
 </div>
 <div class="centro">
