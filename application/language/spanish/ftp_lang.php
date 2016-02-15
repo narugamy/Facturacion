@@ -1,5 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['ftp_no_connection']			= "Imposible encontrar un ID de conexión válido. Asegúrese que está conectado antes de realizar alguna acción.";
 $lang['ftp_unable_to_connect']		= "Imposible de conectar a su servidor FTP usando el nombre de host especificado.";

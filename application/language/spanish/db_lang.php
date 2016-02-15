@@ -1,6 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
 
 $lang['db_invalid_connection_str'] = 'No se ha podido determinar la configuración de la base de datos basados en la cadena enviada.';
 $lang['db_unable_to_connect'] = 'No se ha podido conectar al servidor de base de datos usando la configuración suministrada.';
@@ -13,12 +11,14 @@ $lang['db_must_use_where'] = 'La actualización no es permitida a menos que cont
 $lang['db_del_must_use_where'] = 'El borrado no es permitido a menos que contenga una claúsula "WHERE".';
 $lang['db_field_param_missing'] = 'Para retornar los campos se requiere el nombre de la tabla como parámetro.';
 $lang['db_unsupported_function'] = 'Está característica no está disponible para el SGBD que está usando.';
+/* New in CI 1.5B */
 $lang['db_transaction_failure'] = 'Fallo en la transacción: Rollback performed.';
 $lang['db_unable_to_drop'] = 'No se ha podido eliminar la base de datos especificada.';
 $lang['db_unsuported_feature'] = 'Característica no soportada por la plataforma de base de datos que estás usando.';
 $lang['db_unsuported_compression'] = 'El formato de compresión de ficheros que ha seleccionado no está soportado por su servidor.';
 $lang['db_filepath_error'] = 'No se pueden escribir los datos en el fichero que has enviado.';
 $lang['db_invalid_cache_path'] = 'El directorio para escribir los datos de la cache no posee permisos de escritura.';
+/* New in 1.6 or Higher  */
 $lang['db_must_use_index'] = 'Se debe especificar un índice para que coincida con el de actualizaciones por lotes.';
 $lang['db_batch_missing_index'] = 'Una o más filas enviadas al proceso por lotes de actualización no se encuentra el índice especificado.';
 $lang['db_table_name_required'] = 'Un nombre de tabla es necesario para la operación.';

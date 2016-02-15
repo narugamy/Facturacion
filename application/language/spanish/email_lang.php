@@ -1,11 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['email_must_be_array'] = "El método de validación de correo debe ser pasado como un arreglo.";
 $lang['email_invalid_address'] = "Dirección de correo no válida: %s";
 $lang['email_attachment_missing'] = "No se ha podido localizar el fichero adjunto: %s";
 $lang['email_attachment_unreadable'] = "No se ha podido abrir el fichero adjunto: %s";
-$lang['email_no_from'] = 'No se puede enviar correo sin encabezado.';
 $lang['email_no_recipients'] = "Debe incluir receptores: Para, CC, o BCC";
 $lang['email_send_failure_phpmail'] = "No se puede enviar el correo usando la función mail() de PHP.  Su servidor puede no estar configurado para usar este método de envío.";
 $lang['email_send_failure_sendmail'] = "No se puede enviar el correo usando SendMail. Su servidor puede no estar configurado para usar este método de envío.";
@@ -19,6 +17,7 @@ $lang['email_failed_smtp_login'] = "Falló enviando el comando AUTH LOGIN. Error
 $lang['email_smtp_auth_un'] = "Falló autentificando el usuario. Error: %s";
 $lang['email_smtp_auth_pw'] = "Falló usando la contraseña. Error: %s";
 $lang['email_smtp_data_failure'] = "No se han podido enviar los datos: %s";
+/* New in 1.6 or Higher  */
 $lang['email_exit_status'] = "Código de estado de salida: %s";
 
 

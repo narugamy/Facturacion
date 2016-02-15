@@ -102,7 +102,7 @@ class Home extends CI_Controller {
 						'id'			=>		$user->id,
 						'Perfil'		=>		$user->type_id,
 						'Nombre'		=>		$user->name,
-						'Apellidos'		=>		$user->apellidos,
+						'Apellidos'		=>	$user->apellidos,
 						'Img'			=>		$user->image_id
 					);
 					$this->session->set_userdata($data);

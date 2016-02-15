@@ -1,5 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['imglib_source_image_required'] = "Debes especificar una imagen en las preferencias.";
 $lang['imglib_gd_required'] = "La librería GD es requerida para esta característica.";

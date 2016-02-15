@@ -1,6 +1,6 @@
 # CodeIgniter Spanish Pack
 Paquete de idioma español del framework PHP CodeIgniter
-Versión actual: 3.*
+Versión actual: 2.2.0
 
 ## Ficheros actuales:
 * calendar_lang.php

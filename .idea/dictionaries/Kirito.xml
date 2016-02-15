@@ -1,10 +1,14 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Kirito">
     <words>
+      <w>acepta</w>
       <w>apellidos</w>
       <w>basepath</w>
+      <w>boton</w>
+      <w>caracteres</w>
       <w>clearfix</w>
       <w>dropdown</w>
+      <w>foto</w>
       <w>modelproducto</w>
       <w>nacimiento</w>
       <w>navbar</w>
@@ -12,7 +16,9 @@
       <w>paneladmin</w>
       <w>paneluser</w>
       <w>perfil</w>
+      <w>precio</w>
       <w>producto</w>
+      <w>productos</w>
       <w>rango</w>
     </words>
   </dictionary>

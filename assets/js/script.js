@@ -1,7 +1,7 @@
 $(document).on('ready',function(){
 
-	$("html").niceScroll({styler:"fb",cursorcolor:"#1ABC9C",cursorwidth: '10',cursorborderradius: '10px',background: '#f3f3f4',spacebarenabled:false,cursorborder: '0',zindex: '10000'});
-	$("html").niceScroll({styler:"fb",cursorcolor:"rgba(97, 100, 193, 0.78)",cursorwidth: '10',cursorborderradius: '0',autohidemode: 'false',background: '#F1F1F1',spacebarenabled:false,cursorborder: '0'});
+	$("html").niceScroll({styler:"fb",cursorcolor:"#1ABC9C",cursorwidth: '8',cursorborderradius: '10px',background: '#f3f3f4',spacebarenabled:false,cursorborder: '0',zindex: '10000'});
+	$("html").niceScroll({styler:"fb",cursorcolor:"rgba(97, 100, 193, 0.78)",cursorwidth: '8',cursorborderradius: '0',autohidemode: 'false',background: '#F1F1F1',spacebarenabled:false,cursorborder: '0'});
 	$("html").getNiceScroll();
 	if ($("html").hasClass('scrollbar1-collapsed')){
 		$("html").getNiceScroll().hide();

@@ -1,9 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['migration_none_found']			= "No se encontraron migraciones.";
 $lang['migration_not_found']			= "Esta migración no puede ser encontrada.";
-$lang['migration_sequence_gap']			= "Existe una brecha en la secuencia de la migración en el número de la versión: %s.";
 $lang['migration_multiple_version']		= "Hay varias migraciones con el mismo número de versión: %d.";
 $lang['migration_class_doesnt_exist']	= "La clase de migración \"%s\" no se puede encontrar.";
 $lang['migration_missing_up_method']	= "La clase de migración \"%s\" no tiene el método 'up'.";

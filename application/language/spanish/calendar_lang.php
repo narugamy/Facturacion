@@ -1,5 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['cal_su']			= "Do";
 $lang['cal_mo']			= "Lu";

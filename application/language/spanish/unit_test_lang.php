@@ -1,5 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['ut_test_name']		= 'Nombre de prueba';
 $lang['ut_test_datatype']	= 'Tipo de datos de prueba';
@@ -19,6 +18,7 @@ $lang['ut_array']			= 'Arreglo';
 $lang['ut_object']			= 'Objeto';
 $lang['ut_resource']		= 'Recurso';
 $lang['ut_null']			= 'Null';
+/* New in 1.6 or Higher  */
 $lang['ut_notes']			= 'Notas';
 
 

@@ -1,5 +1,4 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['form_validation_required']			= "El campo %s es obligatorio.";
 $lang['form_validation_isset']				= "El campo %s debe contener un valor.";
@@ -26,7 +25,7 @@ $lang['form_validation_is_natural_no_zero']	= "El campo %s debe contener un núm
 $lang['form_validation_decimal']			= "El campo %s debe contener un número decimal.";
 $lang['form_validation_less_than']			= "El campo %s debe contener un número menor que %s.";
 $lang['form_validation_less_than_equal_to']	= 'El campo %s debe contener un número menor o igual a %s.';
-$lang['form_validation_greater_than']						= "El campo %s debe contener un número mayor que %s.";
+$lang['greater_than']						= "El campo %s debe contener un número mayor que %s.";
 $lang['form_validation_greater_than_equal_to']	= 'El campo %s debe contener un número mayor o igual que %s.';
 $lang['form_validation_error_message_not_set']	= 'No puede acceder a un mensaje de error que corresponde a su nombre de campo{field}.';
 $lang['form_validation_in_list']		= 'El campo %s debe ser una de: %s';
