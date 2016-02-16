@@ -8,7 +8,7 @@ class ControllerAdmin extends CI_Controller{
 		parent::__construct();
 		$this->load->model('Modeluser');
 		$this->perfil=$this->session->userdata('Perfil');
-		if($this->perfil!='admin' || empty($this->perfil)){
+		if($this->perfil!='1' || empty($this->perfil)){
 			redirect(base_url());
 		}
 	}
@@ -39,13 +39,13 @@ class ControllerAdmin extends CI_Controller{
 	}
 
 	public function Index(){
-		$aler=$this->input->post(null,true);
-		$titulo=['title'=>'Panel de Administrador de Usuarios'];
-		$array=['vista'=>'Index','alert'=>$aler];
-		if(!empty($aler)){
-			$this->load->view("user/".$array['vista'],$array);
+		$alert=$this->input->post(null,true);
+		$title=['title'=>'Panel de Administrador de Usuarios'];
+		$array=['vista'=>'Index','alert'=>$alert];
+		if(!empty($alert)){
+			$this->load->view("admin/".$array['vista'],$array);
 		}else{
-			$this->Vista($array,$titulo);
+			$this->Vista($array,$title);
 		}
 	}
 
@@ -66,10 +66,10 @@ class ControllerAdmin extends CI_Controller{
 		$this->form_validation->set_message('min_length', 'El  %s acepta como minimo %s caracteres');
 	}
 
-	public function Vista($array,$titulo){
-		$this->load->view('user/Template/Header',$titulo);
-		$this->load->view('user/'.$array['vista'],$array);
-		$this->load->view('user/Template/Footer');
+	public function Vista($array,$title){
+		$this->load->view('admin/Template/Header',$title);
+		$this->load->view('admin/'.$array['vista'],$array);
+		$this->load->view('admin/Template/Footer');
 	}
 
 	function Update($id=null){

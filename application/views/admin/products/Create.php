@@ -14,7 +14,7 @@
 		</div>
 		<div class="form-group">
 			<?php  echo form_label('Precio','price');
-			echo form_input(['class'=>'form-control','placeholder'=>'Precio del Producto','id'=>'price','name'=>'price','type'=>'number','min'=>'0','step'=>'1']);?>
+			echo form_input(['class'=>'form-control','placeholder'=>'Precio del Producto','id'=>'price','name'=>'price','type'=>'number','min'=>'0','step'=>'0.1']);?>
 		</div>
 		<div class="form-group">
 			<?php  echo form_label('Stock','stock');
