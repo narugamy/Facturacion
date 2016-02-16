@@ -10,11 +10,16 @@ class Modelproducto extends CI_Model{
 
 	function get($array=null)
 	{
-		if(!empty($array)){
+		if(!empty($array['final'])){
+			$this->db->order_by("id", "desc");
+			$query = $this->db->get('products',$array['final'],$array['inicio']);
+			return $query->result();
+		}else if(!empty($array['id']) ||!empty($array['name'])){
 			$this->db->where($array);
 			$query = $this->db->get('products');
 			return $query->row();
 		}else{
+			$this->db->order_by('id', 'desc');
 			$query = $this->db->get('products');
 			return $query->result();
 		}

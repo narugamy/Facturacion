@@ -10,8 +10,7 @@
 		<?php foreach ($productos as $producto){?>
 		<div class="col-xs-6 col-sm-4">
 			<img src="<?=base_url()?>assets/img/wo.jpg" alt="imagen" class="img-product img-responsive">
-			<div class="text"><p id="name">Nombre:  <span><?= $producto->name?></span></p></div>
-			<div class="text"><p id="price">Precio:  <span><?= $producto->price?><span></p></div>
+			<div class="text"><a href="<?=base_url()?>paneladmin/product/<?=$producto->id?>" class="btn btn-success"><p id="name"><span><?= $producto->name?></span></p></a></div>
 		</div>
 		<?php }?>
 	</div>

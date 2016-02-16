@@ -52,7 +52,12 @@ button,button.btn,input.Search
 		padding 1.7em
 		>a
 			color #D95459
-		>i
+			transition .5s
+			&:hover
+				text-decoration none
+				transition .5s
+				color darkblue
+		i
 			margin 0 .6em
 
 .boton-form
@@ -143,6 +148,10 @@ button,button.btn,input.Search
 			color: #333
 			&:hover
 				color #e9e9e9
+
+.img-product
+	height 220px
+	width 100%
 
 .glyphicon
 	top 7px
@@ -261,6 +270,14 @@ button,button.btn,input.Search
 	text-align center
 	top 11px
 	width 13px
+
+.text
+	margin 1em 0 0 0
+	a
+		width 100%
+		padding-left 0
+		padding-right 0
+		border-radius 4px
 
 .user-new
 	float left

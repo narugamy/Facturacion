@@ -52,7 +52,7 @@ class ControllerAdminProduct extends CI_Controller{
 					$this->Modelproducto->insert($producto);
 					$enviar['exito']=true;
 					$enviar['alert']="Creacion exitosa del producto: ".$producto['name']."";
-					$enviar['url']=base_url()."paneladmin/level";
+					$enviar['url']=base_url()."paneladmin/products";
 					$enviar['alertc']="alert alert-success alert-dismissible";
 				}
 			}
@@ -92,7 +92,7 @@ class ControllerAdminProduct extends CI_Controller{
 
 	public function getProduct($array=null)
 	{
-		if(empty($array['final'])){
+		if(empty($array)){
 			$productos=$this->Modelproducto->get();
 		}else{
 			$productos=$this->Modelproducto->get($array);
@@ -128,6 +128,22 @@ class ControllerAdminProduct extends CI_Controller{
 		$this->load->view('admin/Template/Header',$title);
 		$this->load->view('admin/products/'.$array['vista'],$array);
 		$this->load->view('admin/Template/Footer');
+	}
+
+	public function VistaProduct($id)
+	{
+		$product=$this->getProduct(array('id'=>$id));
+		if(is_numeric($id)){
+			$title=['title'=>'Articulo: '.$product->name];
+			$array=['vista'=>'Vista','product'=>$product];
+			if(!empty($alert)){
+				$this->load->view("admin/products/".$array['vista'],$array);
+			}else{
+				$this->Vista($array,$title);
+			}
+		}else{
+
+		}
 	}
 
 }

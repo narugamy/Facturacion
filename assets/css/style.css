@@ -67,8 +67,20 @@ input.Search.btn-primary.btn-lg1.btn-block {
 }
 .banner h2 >a {
   color: #d95459;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
 }
-.banner h2 >i {
+.banner h2 >a:hover {
+  text-decoration: none;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  color: #00008b;
+}
+.banner h2 i {
   margin: 0 0.6em;
 }
 .boton-form {
@@ -170,6 +182,10 @@ input.Search.btn-primary.btn-lg1.btn-block {
 }
 .footer p a:hover {
   color: #e9e9e9;
+}
+.img-product {
+  height: 220px;
+  width: 100%;
 }
 .glyphicon {
   top: 7px;
@@ -324,6 +340,15 @@ input.Search.btn-primary.btn-lg1.btn-block {
   text-align: center;
   top: 11px;
   width: 13px;
+}
+.text {
+  margin: 1em 0 0 0;
+}
+.text a {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-border-radius: 4px;
 }
 .user-new {
   float: left;
