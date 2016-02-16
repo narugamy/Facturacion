@@ -9,9 +9,26 @@
 </div>
 <div class="centro">
 	<div class="row">
-			<div class="col-xs-6 col-sm-4">
-				<img src="<?=base_url()?>assets/img/wo.jpg" alt="imagen" class="img-product img-responsive">
-				<div class="text"><a href="<?=base_url()?>paneladmin/product/<?=$product->id?>" class="btn btn-success"><p id="name"><span><?= $product->name?></span></p></a></div>
+		<div class="col-xs-6 col-sm-3">
+			<img src="<?=base_url()?>assets/img/wo.jpg" alt="imagen" class="img-product img-responsive">
+			<div class="text"><p id="name" class="text-center"><span><?= $product->name?></span></p></div>
+		</div>
+		<div class="col-xs-6 col-sm-9">
+			<div class="description text-justify">
+				<?=$product->description?>
+			</div>	
+			<div class="price">
+				Precio: <?=$product->price?>
 			</div>
+			<?= form_open(base_url()."paneladmin/product/add",['class'=>'form','id'=>'form'])?>
+				<div class="form-group numberitem">
+					<?php  echo form_label('Cantidad','cantidad');
+					echo form_input(['class'=>'form-control','placeholder'=>'Stock del Producto','id'=>'stock','name'=>'stock','type'=>'number','min'=>'0','step'=>'1']);?>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-success">Agregar a Carrito</button>
+				</div>
+			<?= form_close()?>
+		</div>
 	</div>
 </div>

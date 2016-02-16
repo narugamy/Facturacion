@@ -171,6 +171,9 @@ input.Search.btn-primary.btn-lg1.btn-block {
 .contenido {
   padding: 1.3em 1.4em;
 }
+.description {
+  font-size: 15px;
+}
 .footer {
   background: #fff;
   padding: 1em 0;
@@ -342,6 +345,12 @@ input.Search.btn-primary.btn-lg1.btn-block {
   text-align: center;
   top: 11px;
   width: 13px;
+}
+.numberitem {
+  width: 148px;
+}
+.price {
+  margin: 0.5em 0;
 }
 .text {
   margin: 1em 0 0 0;

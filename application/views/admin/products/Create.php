@@ -1,6 +1,6 @@
 <div class="banner">
 	<h2>
-		<a href="<?= base_url() ?>" title="index">Home</a>
+		<a href="<?= base_url() ?>paneladmin" title="index">Panel Admin</a>
 		<i class="fa fa-angle-right"></i>
 		<span>Productos</span>
 	</h2>
