@@ -71,8 +71,10 @@ input.Search.btn-primary.btn-lg1.btn-block {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   -ms-transition: 0.5s;
+  font-size: 13px;
 }
 .banner h2 >a:hover {
+  font-size: 14px;
   text-decoration: none;
   -o-transition: 0.5s;
   -moz-transition: 0.5s;
