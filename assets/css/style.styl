@@ -247,7 +247,7 @@ button,button.btn,input.Search
 			>a
 				border-bottom 1px solid #E9E9E9
 				box-shadow 0 0 #E9E9E9 inset !important
-				padding 12px 0
+				padding 12px 1
 				transition all .5s
 				&:hover
 					box-shadow 43px 0 #E9E9E9 inset !important
@@ -401,6 +401,11 @@ button,button.btn,input.Search
 	.sidebar
 		>div.navbar-collapse.collapse.in
 			padding 0
+
+@media (max-width 533px)
+	.description
+		display: none
+
 @media (max-width 477px)
 
 	.container-bar 
@@ -424,6 +429,18 @@ button,button.btn,input.Search
 				>a
 					&:hover,&:focus,&
 						float right
+
+@media (max-width 425px)
+
+	.form
+		.botonenviar
+			button
+				overflow hidden
+				padding-left 10px
+				width 73px
+
+	.numberitem
+		width 75px
 
 /* Font */
 .fa

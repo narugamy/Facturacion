@@ -22,10 +22,10 @@
 			</div>
 			<?= form_open(base_url()."paneladmin/product/add",['class'=>'form','id'=>'form'])?>
 				<div class="form-group numberitem">
-					<?php  echo form_label('Cantidad','cantidad');
-					echo form_input(['class'=>'form-control','placeholder'=>'Stock del Producto','id'=>'stock','name'=>'stock','type'=>'number','min'=>'0','step'=>'1']);?>
+					<?php  echo form_label('Cantidad','number');
+					echo form_input(['class'=>'form-control','placeholder'=>'Cantidad','id'=>'stock','name'=>'number','type'=>'number','min'=>'0','step'=>'1']);?>
 				</div>
-				<div class="form-group">
+				<div class="form-group botonenviar">
 					<button type="submit" class="btn btn-success">Agregar a Carrito</button>
 				</div>
 			<?= form_close()?>

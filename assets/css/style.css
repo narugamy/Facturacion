@@ -305,7 +305,7 @@ input.Search.btn-primary.btn-lg1.btn-block {
 .navbar-default .menu2 >li >a {
   border-bottom: 1px solid #e9e9e9;
   -webkit-box-shadow: 0 0 #e9e9e9 inset !important;
-  padding: 12px 0;
+  padding: 12px 1;
   -o-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -483,6 +483,11 @@ input.Search.btn-primary.btn-lg1.btn-block {
     padding: 0;
   }
 }
+@media (max-width: 533px) {
+  .description {
+    display: none;
+  }
+}
 @media (max-width: 477px) {
   .container-bar .navbar-right a .name-caret {
     display: none;
@@ -501,6 +506,16 @@ input.Search.btn-primary.btn-lg1.btn-block {
   .navbar-default .navbar-nav >.open >a:focus,
   .navbar-default .navbar-nav >.open >a {
     float: right;
+  }
+}
+@media (max-width: 425px) {
+  .form .botonenviar button {
+    overflow: hidden;
+    padding-left: 10px;
+    width: 73px;
+  }
+  .numberitem {
+    width: 75px;
   }
 }
 /* Font */
