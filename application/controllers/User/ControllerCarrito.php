@@ -46,12 +46,13 @@ class ControllerCarrito extends CI_Controller{
 				if($carrito[$i]['id']==$data['id']){
 					$encontrado=true;
 					$carrito[$i]['number']=$data['number'];
-					$carrito[$i]['price']=$carrito[$i]['price']*$carrito[$i]['number'];
+					$carrito[$i]['price']=$data['price']*$carrito[$i]['number'];
 				}
 			}
-			if($encontrado==true){
-			$product = array('id' => $data['id'], 'number' => $data['number'], 'price' => ($data['price'] * $data['number']), 'name' => $data['name']);
-			array_push($carrito, $product);}
+			if($encontrado==false){
+				$product = array('id' => $data['id'], 'number' => $data['number'], 'price' => ($data['price'] * $data['number']), 'name' => $data['name']);
+				array_push($carrito, $product);
+			}
 			$this->session->set_userdata('carrito',$carrito);
 		}else{
 			$product[]=array('id'=>$data['id'],'number'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
