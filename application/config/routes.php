@@ -58,13 +58,12 @@ $route['create'] = 'Home/Create';
 /* Panel User */
 $route['paneluser'] = 'ControllerUser/Index';
 $route['paneluser/products'] = 'User/ControllerUserProduct/Index';
-$route['paneluser/products/(:num)'] = 'User/ControllerUserProduct/VistaProduct/$1';
+$route['paneluser/product/(:num)'] = 'User/ControllerUserProduct/VistaProduct/$1';
 
 /* Panel Admin */
 $route['paneladmin'] = 'Admin/ControllerAdmin/Index';
 $route['paneladmin/products'] = 'Admin/ControllerAdminProduct/Index';
 $route['paneladmin/product/create'] = 'Admin/ControllerAdminProduct/Create';
 $route['paneladmin/product/crear']  = 'Admin/ControllerAdminProduct/Crear';
-$route['paneladmin/product/(:num)'] = 'Admin/ControllerAdminProduct/VistaProduct/$1';
 $route['paneladmin/product/update/(:num)'] = 'User/ControllerAdminProduct/Update/$1';
 $route['paneladmin/product/delete/(:num)'] = 'User/ControllerAdminProduct/Delete/$1';

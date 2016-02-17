@@ -7,14 +7,24 @@ class ControllerUserProduct extends CI_Controller{
 		$this->load->model('Modelproducto');
 	}
 
-	public function Index(){
-		$aler=$this->input->post(null,true);
-		$titulo=['title'=>'Panel de Productos'];
-		$array=['vista'=>'Index','alert'=>$aler];
-		if(!empty($aler)){
-			$this->load->view("user/".$array['vista'],$array);
+	public function getProduct($array=null)
+	{
+		if(empty($array)){
+			$productos=$this->Modelproducto->get();
 		}else{
-			$this->Vista($array,$titulo);
+			$productos=$this->Modelproducto->get($array);
+		}
+		return $productos;
+	}
+
+	public function Index(){
+		$alert=$this->input->post(null,true);
+		$title=['title'=>'Panel de Productos'];
+		$array=['vista'=>'Index','alert'=>$alert,'productos'=>$this->getProduct()];
+		if(!empty($alert)){
+			$this->load->view("admin/products/".$array['vista'],$array);
+		}else{
+			$this->Vista($array,$title);
 		}
 	}
 
@@ -22,6 +32,22 @@ class ControllerUserProduct extends CI_Controller{
 		$this->load->view('user/Template/Header',$titulo);
 		$this->load->view('user/products/'.$array['vista'],$array);
 		$this->load->view('user/Template/Footer');
+	}
+
+	public function VistaProduct($id)
+	{
+		$product=$this->getProduct(array('id'=>$id));
+		if(is_numeric($id)){
+			$title=['title'=>'Articulo: '.$product->name];
+			$array=['vista'=>'Vista','product'=>$product];
+			if(!empty($alert)){
+				$this->load->view("admin/products/".$array['vista'],$array);
+			}else{
+				$this->Vista($array,$title);
+			}
+		}else{
+
+		}
 	}
 
 }

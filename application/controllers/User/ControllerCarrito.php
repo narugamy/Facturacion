@@ -7,6 +7,7 @@ class ControllerUser extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('Modeluser');
+		$this->load->model('Modelproducto');
 		$this->perfil=$this->session->userdata('Perfil');
 		if($this->perfil!='user' || empty($this->perfil)){
 			redirect(base_url());
@@ -38,6 +39,12 @@ class ControllerUser extends CI_Controller{
 		echo json_encode($errores);
 	}
 
+	public function agregar(){
+		$data=$this->input->post(null,true);
+		$product=array('id'=>$data['id'],'qty'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
+		$this->cart->inset($data);
+	}
+
 	public function Index(){
 		$aler=$this->input->post(null,true);
 		$titulo=['title'=>'Panel de Administrador de Usuarios'];
@@ -49,6 +56,9 @@ class ControllerUser extends CI_Controller{
 		}
 	}
 
+	/**
+	 * @param null $valor
+	 */
 	function Validar($valor=null){
 		$this->form_validation->set_rules('name', 'Nombre', 'trim|required|xss_clean|min_length[6]');
 		$this->form_validation->set_rules('apellidos', 'Apellidos', 'trim|required|xss_clean|min_length[6]');
