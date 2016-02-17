@@ -1,17 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class ControllerUser extends CI_Controller{
+class ControllerCarrito extends CI_Controller{
 
 	private $perfil;
 
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->model('Modeluser');
 		$this->load->model('Modelproducto');
-		$this->perfil=$this->session->userdata('Perfil');
-		if($this->perfil!='user' || empty($this->perfil)){
-			redirect(base_url());
-		}
 	}
 
 	public function Actualizar(){
@@ -39,10 +36,24 @@ class ControllerUser extends CI_Controller{
 		echo json_encode($errores);
 	}
 
-	public function agregar(){
+	public function Add(){
 		$data=$this->input->post(null,true);
-		$product=array('id'=>$data['id'],'qty'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
-		$this->cart->inset($data);
+		$carrito=$this->session->userdata('carrito');
+		$encontrado=false;
+		$num=0;
+		if(!empty($carrito)){
+			for($i=0;$i<count($carrito);$i++){
+
+			}
+			$product=array('id'=>$data['id'],'number'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
+			array_push($carrito,$product);
+			$this->session->set_userdata('carrito',$carrito);
+		}else{
+			$product[]=array('id'=>$data['id'],'number'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
+			$this->session->set_userdata('carrito',$product);
+		}
+		$data=$this->session->userdata('carrito');
+		print_r($data);
 	}
 
 	public function Index(){

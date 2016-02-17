@@ -20,7 +20,7 @@
 			<div class="price">
 				Precio: <?=$product->price?>
 			</div>
-			<?= form_open(base_url()."paneluser/product/add",['class'=>'form','id'=>'form'])?>
+			<?=form_open(base_url()."paneluser/product/add",['class'=>'form','id'=>'form'])?>
 				<?= form_input(['name'=>'price','type'=>'hidden','value'=>$product->price]);?>
 				<?= form_input(['name'=>'name','type'=>'hidden','value'=>$product->name]);?>
 				<?= form_input(['name'=>'id','type'=>'hidden','value'=>$product->id]);?>

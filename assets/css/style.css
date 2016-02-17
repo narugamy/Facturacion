@@ -508,14 +508,27 @@ input.Search.btn-primary.btn-lg1.btn-block {
     float: right;
   }
 }
-@media (max-width: 425px) {
+@media (min-width: 311px) and (max-width: 425px) {
+  .form .numberitem {
+    width: 110%;
+  }
   .form .botonenviar button {
     overflow: hidden;
     padding-left: 10px;
-    width: 73px;
+    width: 110%;
+  }
+}
+@media (max-width: 310px) {
+  .price {
+    width: 110%;
+  }
+  .form .botonenviar button {
+    overflow: hidden;
+    padding-left: 5px;
+    width: 85%;
   }
   .numberitem {
-    width: 75px;
+    width: 85%;
   }
 }
 /* Font */
