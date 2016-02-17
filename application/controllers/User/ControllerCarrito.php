@@ -39,14 +39,19 @@ class ControllerCarrito extends CI_Controller{
 	public function Add(){
 		$data=$this->input->post(null,true);
 		$carrito=$this->session->userdata('carrito');
+		$cantidad=count($carrito);
 		$encontrado=false;
-		$num=0;
 		if(!empty($carrito)){
-			for($i=0;$i<count($carrito);$i++){
-
+			for($i=0;$i<$cantidad;$i++){
+				if($carrito[$i]['id']==$data['id']){
+					$encontrado=true;
+					$carrito[$i]['number']=$data['number'];
+					$carrito[$i]['price']=$carrito[$i]['price']*$carrito[$i]['number'];
+				}
 			}
-			$product=array('id'=>$data['id'],'number'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
-			array_push($carrito,$product);
+			if($encontrado==true){
+			$product = array('id' => $data['id'], 'number' => $data['number'], 'price' => ($data['price'] * $data['number']), 'name' => $data['name']);
+			array_push($carrito, $product);}
 			$this->session->set_userdata('carrito',$carrito);
 		}else{
 			$product[]=array('id'=>$data['id'],'number'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
@@ -67,9 +72,6 @@ class ControllerCarrito extends CI_Controller{
 		}
 	}
 
-	/**
-	 * @param null $valor
-	 */
 	function Validar($valor=null){
 		$this->form_validation->set_rules('name', 'Nombre', 'trim|required|xss_clean|min_length[6]');
 		$this->form_validation->set_rules('apellidos', 'Apellidos', 'trim|required|xss_clean|min_length[6]');

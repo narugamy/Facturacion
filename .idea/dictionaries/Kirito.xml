@@ -9,12 +9,14 @@
       <w>basepath</w>
       <w>boton</w>
       <w>campo</w>
+      <w>cantidad</w>
       <w>caracteres</w>
       <w>carrito</w>
       <w>clearfix</w>
       <w>creación</w>
       <w>crear</w>
       <w>dropdown</w>
+      <w>encontrado</w>
       <w>enteros</w>
       <w>enviar</w>
       <w>errores</w>
@@ -26,6 +28,7 @@
       <w>navbar</w>
       <w>nivel</w>
       <w>nombre</w>
+      <w>numer</w>
       <w>numeros</w>
       <w>paneladmin</w>
       <w>paneluser</w>
@@ -34,6 +37,7 @@
       <w>producto</w>
       <w>productos</w>
       <w>rango</w>
+      <w>validar</w>
     </words>
   </dictionary>
 </component>
