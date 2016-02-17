@@ -58,8 +58,11 @@ class ControllerCarrito extends CI_Controller{
 			$product[]=array('id'=>$data['id'],'number'=>$data['number'],'price'=>($data['price']*$data['number']),'name'=>$data['name']);
 			$this->session->set_userdata('carrito',$product);
 		}
-		$data=$this->session->userdata('carrito');
-		print_r($data);
+		$errores['exito']=true;
+		$errores['alert']="Registro Exitoso del usuario: ".$user['email']."";
+		$errores['url']=base_url()."paneladmin/carrito";
+		$errores['alertc']="alert alert-success alert-dismissible";
+		echo json_encode($errores);
 	}
 
 	public function Index(){

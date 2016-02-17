@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 									<span class="name-caret"><?=$this->session->userdata('Nombre')?>
 										<i class='caret'></i>
 									</span>
@@ -133,15 +133,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="navbar-default sidebar">
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav menu-left">
-							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span><span class="fa fa-angle-down"></span></a>
-								<ul class="dropdown-menu menu2">
-									<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Agregar Producto</span></a></li>
-									<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Editar Producto</span></a></li>
-									<li><a href="#"><i class="fa fa-user"></i><span class="nav-label"> Eliminar Producto</span></a></li>
-								</ul>
-							</li>
-							<li><a href="#"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Facturas</span></a></li>
-							<li><a href="#"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Boletas</span></a></li>
+							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span></a></li>
+							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Facturas</span></a></li>
+							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Boletas</span></a></li>
 						</ul>
 					</div>
 				</div>

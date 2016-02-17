@@ -9,7 +9,8 @@
 			<thead>
 			<th>Nombre</th>
 			<th>Unidades</th>
-			<th>Precio</th>
+			<th>Precio unitario</th>
+			<th>Precio total</th>
 			<th>Acciones</th>
 			</thead>
 			<tbody>
@@ -17,7 +18,8 @@
 					<tr>
 						<?=form_open(base_url()."paneluser/carrito/update",['class'=>'form','id'=>'form'])?>
 							<td><?=$product['name']?></td>
-							<td class="numerito"><?=form_input(['class'=>'form-control numerito','placeholder'=>'Cantidad','id'=>'number','name'=>'number','type'=>'number','min'=>'0','step'=>'0.1','value'=>$product['number']])?></td>
+							<td><?=form_input(['class'=>'form-control','placeholder'=>'Cantidad','id'=>'number','name'=>'number','type'=>'number','min'=>'0','step'=>'1','value'=>$product['number']])?></td>
+							<td><?=($product['price']/$product['number'])?></td>
 							<td><?=$product['price']?><?= form_input(['name'=>'id','type'=>'hidden','value'=>$product['id']])?></td>
 							<td>
 								<button class="btn btn-warning boton" type="submit">Update</button>

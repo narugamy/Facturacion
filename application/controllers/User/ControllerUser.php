@@ -7,10 +7,6 @@ class ControllerUser extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('Modeluser');
-		$this->perfil=$this->session->userdata('Perfil');
-		if($this->perfil!='user' || empty($this->perfil)){
-			redirect(base_url());
-		}
 	}
 
 	public function Actualizar(){
@@ -39,10 +35,10 @@ class ControllerUser extends CI_Controller{
 	}
 
 	public function Index(){
-		$aler=$this->input->post(null,true);
+		$alert=$this->input->post(null,true);
 		$titulo=['title'=>'Panel de Administrador de Usuarios'];
-		$array=['vista'=>'Index','alert'=>$aler];
-		if(!empty($aler)){
+		$array=['vista'=>'Index','alert'=>$alert];
+		if(!empty($alert)){
 			$this->load->view("user/".$array['vista'],$array);
 		}else{
 			$this->Vista($array,$titulo);

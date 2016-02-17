@@ -23,6 +23,12 @@ body {
   font-family: 'Montserrat-Regular';
   font-size: 100%;
 }
+table thead th {
+  text-align: center;
+}
+table tbody tr td {
+  text-align: center;
+}
 @font-face {
   font-family: 'Montserrat-Regular';
   src: url("../fonts/Montserrat-Regular.ttf") format('truetype');
@@ -348,9 +354,6 @@ input.Search.btn-primary.btn-lg1.btn-block {
 }
 .numberitem {
   width: 148px;
-}
-.numerito {
-  width: 50%;
 }
 .price {
   margin: 0.5em 0;
