@@ -349,6 +349,9 @@ input.Search.btn-primary.btn-lg1.btn-block {
 .numberitem {
   width: 148px;
 }
+.numerito {
+  width: 50%;
+}
 .price {
   margin: 0.5em 0;
 }

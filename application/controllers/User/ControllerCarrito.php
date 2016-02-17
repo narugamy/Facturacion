@@ -97,19 +97,18 @@ class ControllerCarrito extends CI_Controller{
 		$this->load->view('user/Template/Footer');
 	}
 
-	function Update($id=null){
-		if(!is_numeric($id)){
-			$this->load->view("errores/html/error_404");
-		}else{
-			$user=$this->Modeluser->getat(array('id'=>$id));
-			$titulo=['title'=>"Panel de Administrador editar usuario: $user->name"];
-			$array=['vista'=>'Update','user'=>$user,'types'=>$this->Modeltype->get(),'levels'=>$this->Modellevel->get()];
-			if($this->input->post('stado',true)==1){
-				$this->load->view("admin/users/".$array['vista'],$array);
-			}else{
-				$this->Vista($array,$titulo);
+	function Update(){
+		$data=$this->input->post(null,true);
+		$carrito=$this->session->userdata('carrito');
+		$cantidad=count($carrito);
+		for($i=0;$i<$cantidad;$i++){
+			if($carrito[$i]['id']==$data['id']){
+				$carrito[$i]['price']=($carrito[$i]['price']/$carrito[$i]['number'])*$data['number'];
+				$carrito[$i]['number']=$data['number'];
 			}
 		}
+		$this->session->set_userdata('carrito',$carrito);
+		redirect("paneluser/carrito",'refresh');
 	}
 
 }
