@@ -49,6 +49,9 @@ class ControllerUser extends CI_Controller{
 		}
 	}
 
+	/**
+	 * @param null $valor
+	 */
 	function Validar($valor=null){
 		$this->form_validation->set_rules('name', 'Nombre', 'trim|required|xss_clean|min_length[6]');
 		$this->form_validation->set_rules('apellidos', 'Apellidos', 'trim|required|xss_clean|min_length[6]');

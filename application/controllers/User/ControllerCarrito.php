@@ -63,11 +63,12 @@ class ControllerCarrito extends CI_Controller{
 	}
 
 	public function Index(){
-		$aler=$this->input->post(null,true);
+		$carrito=$this->session->userdata('carrito');
+		$alert=$this->input->post(null,true);
 		$titulo=['title'=>'Panel de Administrador de Usuarios'];
-		$array=['vista'=>'Index','alert'=>$aler];
-		if(!empty($aler)){
-			$this->load->view("user/".$array['vista'],$array);
+		$array=['vista'=>'Index','alert'=>$alert,'products'=>$carrito];
+		if(!empty($alert)){
+			$this->load->view("user/carrito".$array['vista'],$array);
 		}else{
 			$this->Vista($array,$titulo);
 		}
@@ -92,7 +93,7 @@ class ControllerCarrito extends CI_Controller{
 
 	public function Vista($array,$titulo){
 		$this->load->view('user/Template/Header',$titulo);
-		$this->load->view('user/'.$array['vista'],$array);
+		$this->load->view('user/carrito/'.$array['vista'],$array);
 		$this->load->view('user/Template/Footer');
 	}
 

@@ -31,7 +31,7 @@
 				<div class="form-group botonenviar">
 					<button type="submit" class="btn btn-success">Agregar a Carrito</button>
 				</div>
-			<?= form_close()?>
+			<?=form_close()?>
 		</div>
 	</div>
 </div>
