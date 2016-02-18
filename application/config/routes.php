@@ -54,10 +54,11 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Home/Login';
 $route['create'] = 'Home/Create';
-/* Panel User */
+/*	Panel User	*/
 $route['paneluser']									=	'User/ControllerUser/Index';
 $route['paneluser/products']						=	'User/ControllerUserProduct/Index';
 $route['paneluser/product/(:num)']				=	'User/ControllerUserProduct/VistaProduct/$1';
+/*	Panel Carrito	*/
 $route['paneluser/product/add']					=	'User/ControllerCarrito/Add';
 $route['paneluser/carrito']						=	'User/ControllerCarrito/Index';
 $route['paneluser/carrito/update']				=	'User/ControllerCarrito/Update';
