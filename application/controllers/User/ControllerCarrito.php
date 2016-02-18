@@ -41,6 +41,7 @@ class ControllerCarrito extends CI_Controller{
 		$carrito=$this->session->userdata('carrito');
 		$cantidad=count($carrito);
 		$encontrado=false;
+		$product=array();
 		if(!empty($carrito)){
 			for($i=0;$i<$cantidad;$i++){
 				if($carrito[$i]['id']==$data['id']){
@@ -59,7 +60,7 @@ class ControllerCarrito extends CI_Controller{
 			$this->session->set_userdata('carrito',$product);
 		}
 		$errores['exito']=true;
-		$errores['alert']="Registro Exitoso del usuario: ".$user['email']."";
+		$errores['alert']="Se ha agregado Exitoso al producto: ".$data['name']."";
 		$errores['url']=base_url()."paneladmin/carrito";
 		$errores['alertc']="alert alert-success alert-dismissible";
 		echo json_encode($errores);

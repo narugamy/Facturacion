@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+	defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,8 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fa fa-globe"></i>
-							<span class="number">5</span>
+								<i class="fa fa-globe"></i>
+								<span class="number">5</span>
 							</a>
 							<ul class="dropdown-menu menu">
 								<li>
@@ -140,7 +140,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 			</nav>
-		</div>
-
 			<div class="contenedor_principal">
 				<div class="contenido">

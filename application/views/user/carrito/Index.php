@@ -1,6 +1,9 @@
 <div class="banner">
 	<h2>
-		<a href="<?=base_url()?>" title="index">Home</a>
+		<a href="<?=base_url()?>paneluser" title="index">Home</a>
+		<i class="fa fa-angle-right"></i>
+		<span>Carrito</span>
+
 	</h2>
 </div>
 <div class="centro">

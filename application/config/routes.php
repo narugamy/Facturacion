@@ -54,18 +54,17 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Home/Login';
 $route['create'] = 'Home/Create';
-
 /* Panel User */
-$route['paneluser'] = 'User/ControllerUser/Index';
-$route['paneluser/products'] = 'User/ControllerUserProduct/Index';
-$route['paneluser/product/(:num)'] = 'User/ControllerUserProduct/VistaProduct/$1';
-$route['paneluser/product/add'] = 'User/ControllerCarrito/Add';
-$route['paneluser/carrito'] = 'User/ControllerCarrito/Index';
-$route['paneluser/carrito/update'] = 'User/ControllerCarrito/Update';
+$route['paneluser']									=	'User/ControllerUser/Index';
+$route['paneluser/products']						=	'User/ControllerUserProduct/Index';
+$route['paneluser/product/(:num)']				=	'User/ControllerUserProduct/VistaProduct/$1';
+$route['paneluser/product/add']					=	'User/ControllerCarrito/Add';
+$route['paneluser/carrito']						=	'User/ControllerCarrito/Index';
+$route['paneluser/carrito/update']				=	'User/ControllerCarrito/Update';
 /* Panel Admin */
-$route['paneladmin'] = 'Admin/ControllerAdmin/Index';
-$route['paneladmin/products'] = 'Admin/ControllerAdminProduct/Index';
-$route['paneladmin/product/create'] = 'Admin/ControllerAdminProduct/Create';
-$route['paneladmin/product/crear']  = 'Admin/ControllerAdminProduct/Crear';
-$route['paneladmin/product/update/(:num)'] = 'User/ControllerAdminProduct/Update/$1';
-$route['paneladmin/product/delete/(:num)'] = 'User/ControllerAdminProduct/Delete/$1';
+$route['paneladmin']									=	'Admin/ControllerAdmin/Index';
+$route['paneladmin/products']						=	'Admin/ControllerAdminProduct/Index';
+$route['paneladmin/product/create']				=	'Admin/ControllerAdminProduct/Create';
+$route['paneladmin/product/crear']				=	'Admin/ControllerAdminProduct/Crear';
+$route['paneladmin/product/update/(:num)']	=	'User/ControllerAdminProduct/Update/$1';
+$route['paneladmin/product/delete/(:num)']	=	'User/ControllerAdminProduct/Delete/$1';
