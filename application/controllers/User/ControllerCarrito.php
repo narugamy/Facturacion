@@ -62,7 +62,7 @@ class ControllerCarrito extends CI_Controller{
 		}
 		$errores['exito']=true;
 		$errores['alert']="Se ha agregado Exitoso al producto: ".$data['name']."";
-		$errores['url']=base_url()."paneladmin/carrito";
+		$errores['url']=base_url()."paneluser/carrito";
 		$errores['alertc']="alert alert-success alert-dismissible";
 		echo json_encode($errores);
 	}
@@ -124,15 +124,21 @@ class ControllerCarrito extends CI_Controller{
 		$data=$this->input->post(null,true);
 		$carrito=$this->session->userdata('carrito');
 		$cantidad=count($carrito);
+		$num=0;
 			for($i=0;$i<$cantidad;$i++){
 				if($carrito[$i]['id']==$data['id']){
+					$num=$i;
 					$carrito[$i]['price']=($carrito[$i]['price']/$carrito[$i]['number'])*$data['number'];
 					$carrito[$i]['number']=$data['number'];
 					break;
 				}
 			}
 		$this->session->set_userdata('carrito',$carrito);
-		redirect("paneluser/carrito",'refresh');
+		$errores['exito']=true;
+		$errores['alert']="Se ha editado exitosamente el producto: ".$carrito[$num]['name']."";
+		$errores['url']=base_url()."paneluser/carrito";
+		$errores['alertc']="alert alert-success alert-dismissible";
+		echo json_encode($errores);
 	}
 
 }
