@@ -7,6 +7,11 @@
 	</h2>
 </div>
 <div class="centro">
+	<?php if(!empty($alert['alert'])){?>
+		<div class="<?=$alert['alertc']?>">
+			<p><?=$alert['alert']?></p>
+		</div>
+	<?php } ?>
 	<div class="table-responsive">
 		<table class="table table-striped">
 			<thead>
