@@ -34,4 +34,5 @@ $(document).on('ready',function(){
     }
 
     ajax('#wrapper','click','.menu-left li a');
+    ajax('#wrapper','click','.centro .text a');
 });

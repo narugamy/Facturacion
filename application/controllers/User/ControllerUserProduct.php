@@ -41,12 +41,13 @@ class ControllerUserProduct extends CI_Controller{
 
 	public function VistaProduct($id=null)
 	{
+		$alert=$this->input->post(null,true);
 		$product=$this->getProduct(array('id'=>$id));
 		if(is_numeric($id)){
 			$title=['title'=>'Articulo: '.$product->name];
 			$array=['vista'=>'Vista','product'=>$product];
-			if(!empty($alert)){
-				$this->load->view("admin/products/".$array['vista'],$array);
+			if(!empty($alert['stado'])){
+				$this->load->view('user/products/'.$array['vista'],$array);
 			}else{
 				$this->Vista($array,$title);
 			}
