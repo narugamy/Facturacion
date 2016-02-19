@@ -1,6 +1,7 @@
 $(document).on('ready',function(){
 
-    $('html').niceScroll({styler:"fb",cursorcolor:"#1ABC9C",cursorwidth: '8',cursorborderradius: '10px',background: '#f3f3f4',spacebarenabled:false,cursorborder: '0',zindex: '10000'}).getNiceScroll();
+    $('html').niceScroll({styler:"fb",cursorcolor:"#1ABC9C",cursorwidth: '8',cursorborderradius: '10px',background: '#f3f3f4',spacebarenabled:false,cursorborder: '0',zindex: '10000'});
+    $('html').getNiceScroll();
 	if ($("html").hasClass('scrollbar1-collapsed')){
 		$("html").getNiceScroll().hide();
 	}
@@ -31,5 +32,6 @@ $(document).on('ready',function(){
                 });
         });
     }
+
     ajax('#wrapper','click','.menu-left li a');
 });
