@@ -27,7 +27,7 @@
                                 <td><?=$product['price']?><?= form_input(['name'=>'id','type'=>'hidden','value'=>$product['id']])?></td>
                                 <td>
                                     <button class="btn btn-warning boton" type="submit">Update</button>
-                                    <a href="<?=base_url()?>paneluser/carrito/<?=$product['id']?>" class="btn btn-danger boton" id="json" onclick="return confirm('¿Seguro que desea Eliminarlo?')"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+                                    <a href="<?=base_url()?>paneluser/carrito/<?=$product['id']?>" class="btn btn-danger boton" id="json" onclick="return confirm('¿Seguro que desea Eliminarlo?')"><span class="fa fa-times" aria-hidden="true"></span></a>
                                 </td>
                             <?=form_close()?>
                         </tr>

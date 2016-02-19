@@ -134,7 +134,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav menu-left">
 							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span></a></li>
-							<li><a href="<?=base_url()?>paneluser/carrito"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Carrito</span></a></li>
+							<li><a href="<?=base_url()?>paneluser/carrito"><i class="fa fa-shopping-cart"></i><span class="nav-label"> Carrito</span></a></li>
                         </ul>
 					</div>
 				</div>
