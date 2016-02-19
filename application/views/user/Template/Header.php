@@ -8,10 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/library/Bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/style.css">
-		<script src="<?=base_url()?>assets/library/Jquery/js/Jquery.min.js" type="text/javascript"></script>
-		<script src="<?=base_url()?>assets/library/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-		<script src="<?=base_url()?>assets/library/Nicescroll/js/nicescroll.min.js" type="text/javascript"></script>
-		<script src="<?=base_url()?>assets/js/script.js" type="text/javascript"></script>
 		<title>Bienvenidos al Sistema de venta</title>
 	</head>
 	<body>

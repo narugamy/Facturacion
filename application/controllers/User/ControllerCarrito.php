@@ -136,7 +136,7 @@ class ControllerCarrito extends CI_Controller{
 		$this->session->set_userdata('carrito',$carrito);
 		$errores['exito']=true;
 		$errores['alert']="Se ha editado exitosamente el producto: ".$carrito[$num]['name']."";
-		$errores['url']=base_url()."paneluser/carrito";
+		$errores['url']=base_url()."paneluser/carrito/";
 		$errores['alertc']="alert alert-success alert-dismissible";
 		echo json_encode($errores);
 	}

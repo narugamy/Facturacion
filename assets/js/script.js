@@ -1,6 +1,6 @@
 $(document).on('ready',function(){
 
-	formularios('#wrapper','.contenido form#form','image_id','post','json');
+	formularios('#wrapper','.contenido form.form','image_id','post','json');
 	ajax('#wrapper','click','.menu-left li a');
 	ajax('#wrapper','click','.contenido .text a');
 
@@ -20,7 +20,7 @@ $(document).on('ready',function(){
 		}
 	}
 
-	setInterval(classes,500);
+
 
 	 function ajax(contenedor,evento,disparo){
 			$(contenedor).on(evento,disparo,function(event){
@@ -73,5 +73,7 @@ $(document).on('ready',function(){
 				});
 		});
 	}
+
+	setInterval(classes,500);
 
 });

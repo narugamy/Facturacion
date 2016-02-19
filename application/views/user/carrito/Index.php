@@ -9,6 +9,7 @@
 <div class="centro">
 	<?php if(!empty($alert['alert'])){?>
 		<div class="<?=$alert['alertc']?>">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<p><?=$alert['alert']?></p>
 		</div>
 	<?php } ?>
