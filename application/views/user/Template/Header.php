@@ -29,12 +29,6 @@
 							<a class="navbar-brand title" href="#">Alchemist</a>
 						</h1>
 					</div>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control Search" placeholder="Search...">
-						</div>
-						<button type="submit" class="fa fa-search"></button>
-					</form>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,12 +126,21 @@
 				<div class="clearfix"></div>
 				<div class="navbar-default sidebar">
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav menu-left">
+                    <ul class="nav navbar-nav menu-left">
 							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span></a></li>
 							<li><a href="<?=base_url()?>paneluser/carrito"><i class="fa fa-shopping-cart"></i><span class="nav-label"> Carrito</span></a></li>
+                            <li>
+                                <?=form_open(base_url()."paneluser/product",['class'=>'navbar-form navbar-left','role='=>'search'])?>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control Search" placeholder="Search...">
+                                    </div>
+                                    <button type="submit" class="fa fa-search"></button>
+                                <?=form_close()?>
+                            </li>
                         </ul>
 					</div>
 				</div>
+
 			</nav>
 			<div class="contenedor_principal">
 				<div class="contenido">

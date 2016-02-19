@@ -88,22 +88,6 @@ button,button.btn,input.Search
 				background #fff
 				&:hover,&:focus
 					background #fff
-	.navbar-form
-		button
-			background none
-			border 0
-			padding 0
-			&:before
-				color grey
-				font-size 1.2em
-		&.navbar-left
-			input
-				&[type="text"]
-					background none
-					border none
-					color #B3AEAE
-					font-size 0.9em
-					outline none
 	.navbar-right
 		.dropdown-menu
 			border 1px solid #ebeff6
@@ -250,13 +234,39 @@ button,button.btn,input.Search
 		margin-bottom 0
 		padding-left 0
 		width 100%
+		.navbar-left
+			margin-bottom 5px
+			margin-top 5px
+			border-bottom 1px solid #E9E9E9
+			div
+				width 88.5%
+			button
+				background none
+				border 0
+				padding 0
+				&:before
+					color grey
+					font-size 1.2em
+			input
+				&[type="text"]
+					background none
+					border none
+					color #B3AEAE
+					font-size 0.9em
+					outline none
 		>li
 			width 100%
+			>form
+				border-bottom 1px solid #E9E9E9
+				padding-bottom 2px
+				padding-top 2px
 			>a
 				border-bottom 1px solid #E9E9E9
 				box-shadow 0 0 #E9E9E9 inset !important
 				padding 12px 1
 				transition all .5s
+				padding-bottom 12px
+				padding-top 12px
 				&:hover
 					box-shadow 43px 0 #E9E9E9 inset !important
 				i
@@ -269,6 +279,8 @@ button,button.btn,input.Search
 						margin-left 1em
 	&.navbar-static-top
 		margin-bottom 0
+
+
 
 .number
 	background-color #EB0000
@@ -373,6 +385,8 @@ button,button.btn,input.Search
 	
 	.menu-left
 		margin -0.5px 0
+		.navbar-left
+			margin 6px 0 6px .8em
 
 	.navbar-header
 		background #1abc9c
@@ -385,7 +399,6 @@ button,button.btn,input.Search
 			.dropdown-menu
 				background #fff
 				position absolute
-				
 		>li
 			float left
 			>a

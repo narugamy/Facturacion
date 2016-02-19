@@ -17,10 +17,10 @@ class ControllerUserProduct extends CI_Controller{
 		return $productos;
 	}
 
-	public function Index(){
+	public function Index($nom=null){
 		$alert=$this->input->post(null,true);
 		$title=['title'=>'Panel de Productos'];
-		$array=['vista'=>'Index','alert'=>$alert,'productos'=>$this->getProduct()];
+		$array=['vista'=>'Index','alert'=>$alert,'productos'=>$this->getProduct(array('name'=>$nom))];
 		if(!empty($alert)){
 			$this->load->view("admin/products/".$array['vista'],$array);
 		}else{
@@ -34,7 +34,7 @@ class ControllerUserProduct extends CI_Controller{
 		$this->load->view('user/Template/Footer');
 	}
 
-	public function VistaProduct($id)
+	public function VistaProduct($id=null)
 	{
 		$product=$this->getProduct(array('id'=>$id));
 		if(is_numeric($id)){

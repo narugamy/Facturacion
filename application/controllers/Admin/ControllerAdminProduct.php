@@ -21,7 +21,7 @@ class ControllerAdminProduct extends CI_Controller{
 
 			$this->Validation();
 			if ($this->form_validation->run() == FALSE){
-				$error['name']=form_error('name');
+				$error['name']=form_error('namef');
 				$error['price']=form_error('price');
 				$error['stock']=form_error('stock');
 			}else{

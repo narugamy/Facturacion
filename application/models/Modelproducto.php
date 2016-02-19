@@ -14,10 +14,14 @@ class Modelproducto extends CI_Model{
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get('products',$array['final'],$array['inicio']);
 			return $query->result();
-		}else if(!empty($array['id']) ||!empty($array['name'])){
+		}else if(!empty($array['id'])){
 			$this->db->where($array);
 			$query = $this->db->get('products');
 			return $query->row();
+		}else if(!empty($array['name'])) {
+			$this->db->like($array);
+			$query = $this->db->get('products');
+			return $query->result();
 		}else{
 			$this->db->order_by('id', 'desc');
 			$query = $this->db->get('products');

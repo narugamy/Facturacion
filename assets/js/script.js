@@ -10,12 +10,12 @@ $(document).on('ready',function(){
 	function classes(){
 		if($( window ).width() < 769){
 			$("nav.navbar").removeClass('navbar-fixed-top');
-			$(".contenedor_principal").css('margin-top','-1.2em');
+			$(".contenedor_principal").css('margin-top','-1.3em');
 		}else{
 			$("nav.navbar").addClass('navbar-fixed-top');
 			$(".contenedor_principal").css('margin-top','3.7em');
 		}
 	}
 
-	setInterval(classes,1000);
+	setInterval(classes,500);
 });

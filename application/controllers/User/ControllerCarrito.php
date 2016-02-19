@@ -124,13 +124,13 @@ class ControllerCarrito extends CI_Controller{
 		$data=$this->input->post(null,true);
 		$carrito=$this->session->userdata('carrito');
 		$cantidad=count($carrito);
-		for($i=0;$i<$cantidad;$i++){
-			if($carrito[$i]['id']==$data['id']){
-				$carrito[$i]['price']=($carrito[$i]['price']/$carrito[$i]['number'])*$data['number'];
-				$carrito[$i]['number']=$data['number'];
-				break;
+			for($i=0;$i<$cantidad;$i++){
+				if($carrito[$i]['id']==$data['id']){
+					$carrito[$i]['price']=($carrito[$i]['price']/$carrito[$i]['number'])*$data['number'];
+					$carrito[$i]['number']=$data['number'];
+					break;
+				}
 			}
-		}
 		$this->session->set_userdata('carrito',$carrito);
 		redirect("paneluser/carrito",'refresh');
 	}
