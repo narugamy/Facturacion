@@ -61,6 +61,7 @@ $route['paneluser/product/(:num)']				=	'User/ControllerUserProduct/VistaProduct
 /*	Panel Carrito	*/
 $route['paneluser/product/add']					=	'User/ControllerCarrito/Add';
 $route['paneluser/carrito']						=	'User/ControllerCarrito/Index';
+$route['paneluser/carrito/delete/(:num)']		=	'User/ControllerCarrito/Delete/$1';
 $route['paneluser/carrito/update']				=	'User/ControllerCarrito/Update';
 /* Panel Admin */
 $route['paneladmin']									=	'Admin/ControllerAdmin/Index';

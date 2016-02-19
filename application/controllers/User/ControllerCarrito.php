@@ -48,6 +48,7 @@ class ControllerCarrito extends CI_Controller{
 					$encontrado=true;
 					$carrito[$i]['number']=$data['number'];
 					$carrito[$i]['price']=$data['price']*$carrito[$i]['number'];
+					break;
 				}
 			}
 			if($encontrado==false){
@@ -64,6 +65,24 @@ class ControllerCarrito extends CI_Controller{
 		$errores['url']=base_url()."paneladmin/carrito";
 		$errores['alertc']="alert alert-success alert-dismissible";
 		echo json_encode($errores);
+	}
+
+	public function delete($num=null){
+		if(is_numeric($num)){
+			$carrito=$this->session->userdata('carrito');
+			$cantidad=count($carrito);
+			for($i=0;$i<$cantidad;$i++){
+				if($carrito[$i]['id']==$num){
+					unset($carrito[$i]);
+					$carrito=array_values($carrito);
+					break;
+				}
+			}
+			$this->session->set_userdata('carrito',$carrito);
+			redirect("paneluser/carrito",'refresh');
+		}else{
+			echo "Error";
+		}
 	}
 
 	public function Index(){
@@ -109,6 +128,7 @@ class ControllerCarrito extends CI_Controller{
 			if($carrito[$i]['id']==$data['id']){
 				$carrito[$i]['price']=($carrito[$i]['price']/$carrito[$i]['number'])*$data['number'];
 				$carrito[$i]['number']=$data['number'];
+				break;
 			}
 		}
 		$this->session->set_userdata('carrito',$carrito);
