@@ -90,8 +90,8 @@ class ControllerCarrito extends CI_Controller{
 		$alert=$this->input->post(null,true);
 		$titulo=['title'=>'Panel de Administrador de Usuarios'];
 		$array=['vista'=>'Index','alert'=>$alert,'products'=>$carrito];
-		if(!empty($alert)){
-			$this->load->view("user/carrito".$array['vista'],$array);
+		if(!empty($alert['stado'])){
+			$this->load->view("user/carrito/".$array['vista'],$array);
 		}else{
 			$this->Vista($array,$titulo);
 		}

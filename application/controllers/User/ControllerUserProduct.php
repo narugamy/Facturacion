@@ -17,12 +17,17 @@ class ControllerUserProduct extends CI_Controller{
 		return $productos;
 	}
 
-	public function Index($nom=null){
+	public function Index(){
 		$alert=$this->input->post(null,true);
 		$title=['title'=>'Panel de Productos'];
-		$array=['vista'=>'Index','alert'=>$alert,'productos'=>$this->getProduct(array('name'=>$nom))];
-		if(!empty($alert)){
-			$this->load->view("admin/products/".$array['vista'],$array);
+		if(empty($alert['name'])){
+			$dato=$this->getProduct();
+		}else{
+			$dato=$this->getProduct($alert['name']);
+		}
+		$array=['vista'=>'Index','alert'=>$alert,'productos'=>$dato];
+		if(!empty($alert['stado'])){
+			$this->load->view('user/products/'.$array['vista'],$array);
 		}else{
 			$this->Vista($array,$title);
 		}

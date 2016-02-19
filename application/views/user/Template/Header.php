@@ -130,9 +130,9 @@
 							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span></a></li>
 							<li><a href="<?=base_url()?>paneluser/carrito"><i class="fa fa-shopping-cart"></i><span class="nav-label"> Carrito</span></a></li>
                             <li>
-                                <?=form_open(base_url()."paneluser/product",['class'=>'navbar-form navbar-left','role='=>'search'])?>
+                                <?=form_open(base_url()."paneluser/products",['class'=>'navbar-form navbar-left'])?>
                                     <div class="form-group">
-                                        <input type="text" class="form-control Search" placeholder="Search...">
+                                        <input type="text" class="form-control Search" placeholder="Search..." name="name">
                                     </div>
                                     <button type="submit" class="fa fa-search"></button>
                                 <?=form_close()?>

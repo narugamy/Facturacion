@@ -57,7 +57,6 @@ $route['create'] = 'Home/Create';
 /*	Panel User	*/
 $route['paneluser']									=	'User/ControllerUser/Index';
 $route['paneluser/products']						=	'User/ControllerUserProduct/Index';
-$route['paneluser/products/(:any)']				=	'User/ControllerUserProduct/Index/$1';
 $route['paneluser/product/(:num)']				=	'User/ControllerUserProduct/VistaProduct/$1';
 /*	Panel Carrito	*/
 $route['paneluser/product/add']					=	'User/ControllerCarrito/Add';
