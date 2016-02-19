@@ -17,7 +17,7 @@
 			<th>Acciones</th>
 			</thead>
 			<tbody>
-                <?php if(!empty($product)){?>
+                <?php if(!empty($products)){?>
 				    <?php foreach($products as $product){?>
                         <tr>
                             <?=form_open(base_url()."paneluser/carrito/update",['class'=>'form','id'=>'form'])?>
