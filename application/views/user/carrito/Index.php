@@ -26,7 +26,7 @@
 				<?php if(!empty($products)){?>
 					<?php foreach($products as $product){?>
 						<tr>
-							<?=form_open(base_url()."paneluser/carrito/update",['class'=>'form','id'=>'form'])?>
+							<?=form_open_multipart(base_url()."paneluser/carrito/update",['class'=>'form','id'=>'form'])?>
 								<td><?=$product['name']?></td>
 								<td><?=form_input(['class'=>'form-control','placeholder'=>'Cantidad','id'=>'number','name'=>'number','type'=>'number','min'=>'0','step'=>'1','value'=>$product['number']])?></td>
 								<td><?=($product['price']/$product['number'])?></td>

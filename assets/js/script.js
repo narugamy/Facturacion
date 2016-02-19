@@ -19,9 +19,7 @@ $(document).on('ready',function(){
 			$(".contenedor_principal").css('margin-top','3.7em');
 		}
 	}
-
-
-
+	
 	 function ajax(contenedor,evento,disparo){
 			$(contenedor).on(evento,disparo,function(event){
 				event.preventDefault();
@@ -43,10 +41,10 @@ $(document).on('ready',function(){
 			var web=$(this).attr('action');
 			var datos = new FormData();
 			if(document.getElementById(imagen)!=null){
-				 datos.append(imagen,document.getElementById(imagen).files[0]);}
+				datos.append(imagen,document.getElementById(imagen).files[0]);}
 			var formulario = $(this).serializeArray();
 			for(var i=0;i<formulario.length;i++){
-				 datos.append(formulario[i].name,formulario[i].value);}
+				datos.append(formulario[i].name,formulario[i].value);}
 			$.ajax({
 				url: web,
 				type: metodo,
@@ -58,7 +56,8 @@ $(document).on('ready',function(){
 					if(dato.exito){
 						$.post(dato.url, {alert: dato.alert,alertc:dato.alertc,stado:1},null,'html')
 							.done(function(datos){
-								$('.contenido').html(datos);
+								$('#wrapper .contenido').html(datos);
+								formularios('#wrapper','.contenido form.form','image_id','post','json');
 							})
 							.error(function(){
 								alert('Error');
