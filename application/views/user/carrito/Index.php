@@ -8,7 +8,7 @@
 </div>
 <div class="centro">
 	<div class="table-responsive">
-		<table class="table table-striped">
+		<table class="table table-striped table-bordered">
 			<thead>
 			<th>Nombre</th>
 			<th>Unidades</th>
@@ -34,6 +34,9 @@
 				    <?php }?>
                 <?php }?>
 			</tbody>
-		</table>
-	</div>
+        </table>
+        <div>
+            <a href="<?=base_url()?>paneluser/guardar" class="btn btn-success boton" id="json" onclick="return confirm('¿Seguro que desea enviar el pedido?')">Enviar Pedido</a>
+        </div>
+    </div>
 </div>
