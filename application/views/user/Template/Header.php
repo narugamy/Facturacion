@@ -126,7 +126,7 @@
 							<li><a href="<?=base_url()?>paneluser/products"><i class="fa fa-dashboard nav_icon"></i><span class="nav-label"> Productos</span></a></li>
 							<li><a href="<?=base_url()?>paneluser/carrito"><i class="fa fa-shopping-cart"></i><span class="nav-label"> Carrito</span></a></li>
                             <li>
-                                <?=form_open(base_url()."paneluser/products",['class'=>'navbar-form navbar-left'])?>
+                                <?=form_open(base_url()."paneluser/products",['class'=>'navbar-form navbar-left form'])?>
                                     <div class="form-group">
                                         <input type="text" class="form-control Search" placeholder="Search..." name="name">
                                     </div>
